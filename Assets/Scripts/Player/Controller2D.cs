@@ -66,7 +66,16 @@ public class Controller2D : MonoBehaviour
         {
             VerticalCollisions(ref velocity);
         }
-
+        Vector3 localScale = new Vector3(1f, 1f, 1f);
+        if (velocity.x > 0)
+        {
+            localScale.x = 1f;
+        }
+        else if (velocity.x < 0)
+        {
+            localScale.x = -1f;
+        }
+        this.gameObject.transform.localScale = localScale;
         // Recombine velocities through their own projected local axis
         velocity = localForward * projectedVelocity.x + localUp * projectedVelocity.y;
 
