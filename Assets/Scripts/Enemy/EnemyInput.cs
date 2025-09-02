@@ -13,7 +13,6 @@ public class EnemyInput : MonoBehaviour
     Vector2 velocity;
 
     [SerializeField] private float jumpHeight = 4; // Jump height in units
-    [SerializeField] private float jumpForgivenessTime = 0.2f; // Time in seconds within you can use your inital to jump after falling off a platform.
     [SerializeField] private float timeToJumpApex = 0.4f; // Time in seconds until the apex of the jump, after which the player falls back down.
 
     [SerializeField] private float moveSpeed = 6;
