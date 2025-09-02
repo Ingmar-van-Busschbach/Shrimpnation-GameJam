@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    GameObject enemyInst;
     GameObject player;
     private float currentDelay;
 
@@ -36,6 +37,6 @@ public class EnemySpawner : MonoBehaviour
     }
     void SpawnEnemy()
     {
-        Instantiate(enemyToSpawn, spawnLocation);
+        enemyInst = Instantiate(enemyToSpawn, spawnLocation.position, this.transform.rotation);
     }
 }
