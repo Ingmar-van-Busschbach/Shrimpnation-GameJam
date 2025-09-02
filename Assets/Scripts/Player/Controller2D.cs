@@ -19,9 +19,9 @@ public class Controller2D : MonoBehaviour
     [SerializeField] private LayerMask collisionMask;
     // Raycast settings
     [Range(2, 25)] // Clamp to make sure collision checks are made for each corner. It is not recommended to go above 10 for performance reasons.
-    [SerializeField] private int horizontalRayCount = 4;
+    [SerializeField] private int horizontalRayCount = 12;
     [Range(2, 25)]
-    [SerializeField] private int verticalRayCount = 4;
+    [SerializeField] private int verticalRayCount = 12;
 
     public CollisionInfo collisionInfo;
     public Vector2 localUp = new Vector2(0, 1); // Physics controller uses a Local Up direction. The entire physics calculation uses this as its up direction, including collisions, gravity/jumping, etc.
