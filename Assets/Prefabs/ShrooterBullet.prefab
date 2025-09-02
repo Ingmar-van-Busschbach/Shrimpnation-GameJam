@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 4321581871058822415}
   - component: {fileID: 701056541865406989}
   - component: {fileID: 784870840950826584}
-  - component: {fileID: -2164384369697675162}
-  - component: {fileID: 5174748649863365355}
+  - component: {fileID: 8148305930170984072}
+  - component: {fileID: 5938611269052961328}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: ShrooterBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,7 +120,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &-2164384369697675162
+--- !u!114 &8148305930170984072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4743296391350776030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3d211197cc8084485ac4c5c456ad0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BulletBehavior
+  damage: 1
+  velocity: 5
+  lifeTime: 3
+  collisionLayers:
+    serializedVersion: 2
+    m_Bits: 192
+--- !u!61 &5938611269052961328
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,21 +184,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.12, y: 0.13}
   m_EdgeRadius: 0
---- !u!114 &5174748649863365355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4743296391350776030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3d211197cc8084485ac4c5c456ad0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BulletBehavior
-  damage: 0.2
-  velocity: 15
-  lifeTime: 3
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 384
