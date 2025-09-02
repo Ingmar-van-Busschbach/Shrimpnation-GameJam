@@ -29,10 +29,5 @@ public class PlayerShootInput : MonoBehaviour
             currentDelay = shootDelay;
             shooter.Shoot();
         }
-        if(this.transform.parent.transform.localScale.x < 0)
-        {
-            Vector3 localScale = new Vector3(-1f, 1f, 1f);
-            this.transform.localScale = Vector3.Scale(localScale, startingScale);
-        }
     }
 }
