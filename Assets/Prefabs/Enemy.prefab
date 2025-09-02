@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5191489572995525913}
   - component: {fileID: 6984791704461059886}
   - component: {fileID: 4747308936709344083}
+  - component: {fileID: 5531535002018552006}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -115,7 +116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyInput
   jumpHeight: 4
-  jumpForgivenessTime: 0.2
   timeToJumpApex: 0.4
   moveSpeed: 6
   accelerationTimeGrounded: 0.1
@@ -181,6 +181,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5531535002018552006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669017091242397060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956065eade7398e439582eadb1d11a75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
+  maxHealth: 1
 --- !u!1 &5501359955408701769
 GameObject:
   m_ObjectHideFlags: 0
