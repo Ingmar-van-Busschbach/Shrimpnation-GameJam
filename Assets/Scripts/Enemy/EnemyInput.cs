@@ -33,6 +33,7 @@ public class EnemyInput : MonoBehaviour
         // Setup jump variables to allow for more logical exposed settings.
         gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
         jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
+        jumpTimer = Random.Range(0, jumpDelay);
     }
 
     // Update is called once per frame
