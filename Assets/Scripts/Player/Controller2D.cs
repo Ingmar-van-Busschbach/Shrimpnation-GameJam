@@ -8,7 +8,7 @@ public class Controller2D : MonoBehaviour
     // Requisites
     float horizontalRaySpacing;
     float verticalRaySpacing;
-    new BoxCollider2D collider;
+    BoxCollider2D collider;
     RayCastOrigins rayCastOrigins;
     Vector2 projectedVelocity;
     Vector2 localForward;
