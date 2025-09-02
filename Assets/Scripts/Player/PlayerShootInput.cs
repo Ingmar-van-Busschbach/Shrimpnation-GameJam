@@ -21,7 +21,7 @@ public class PlayerShootInput : MonoBehaviour
         shooter.HandleGunRotation(direction);
 
         currentDelay -= Time.deltaTime;
-        if (Mouse.current.leftButton.wasPressedThisFrame && currentDelay <= 0)
+        if (Mouse.current.leftButton.isPressed && currentDelay <= 0)
         {
             currentDelay = shootDelay;
             shooter.Shoot();

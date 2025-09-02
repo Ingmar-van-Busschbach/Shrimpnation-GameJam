@@ -7,8 +7,6 @@ public class Shooter2D : MonoBehaviour
     Vector3 startingScale;
     Vector3 localScale = new Vector3(1f, 1f, 1f);
 
-    [SerializeField] private float damage = 1f;
-    [SerializeField] private float velocity = 1f;
     [SerializeField] private GameObject bullet;
     [SerializeField] private Transform bulletSpawnPoint;
 
