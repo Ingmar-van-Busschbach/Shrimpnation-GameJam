@@ -3,9 +3,9 @@ using UnityEngine;
 public class EnemyActivator : MonoBehaviour
 {
     GameObject player;
+    bool activated;
 
     [SerializeField] private GameObject[] enemiesToActivate;
-    [SerializeField] private LayerMask collisionLayers;
     [SerializeField] private Vector2 bottomLeftSpawnTrigger;
     [SerializeField] private Vector2 topRightSpawnTrigger;
 
@@ -16,6 +16,10 @@ public class EnemyActivator : MonoBehaviour
 
     private void Update()
     {
+        if (activated)
+        {
+            return;
+        }
         if (
             player.transform.position.x > this.transform.position.x + bottomLeftSpawnTrigger.x &&
             player.transform.position.y > this.transform.position.y + bottomLeftSpawnTrigger.y &&
@@ -23,14 +27,11 @@ public class EnemyActivator : MonoBehaviour
             player.transform.position.y < this.transform.position.y + topRightSpawnTrigger.y
             )
         {
+            activated = true;
             foreach (GameObject enemyToActivate in enemiesToActivate)
             {
                 enemyToActivate.GetComponent<EnemyInput>().enabled = true;
             }
         }
-    }
-    void SpawnEnemy()
-    {
-        enemyInst = Instantiate(enemyToSpawn, spawnLocation.position, this.transform.rotation);
     }
 }

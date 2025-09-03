@@ -7,7 +7,6 @@ public class EnemySpawner : MonoBehaviour
     private float currentDelay;
 
     [SerializeField] private GameObject enemyToSpawn;
-    [SerializeField] private LayerMask collisionLayers;
     [SerializeField] private Vector2 bottomLeftSpawnTrigger;
     [SerializeField] private Vector2 topRightSpawnTrigger;
     [SerializeField] private float spawnDelay = 3f;
