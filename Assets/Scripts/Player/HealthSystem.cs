@@ -15,7 +15,7 @@ public class HealthSystem : MonoBehaviour, IDamageAble
     {
         currentHealth -= damage;
 
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
             OnDeath();
         }
