@@ -32,6 +32,9 @@ public class Shooter2D : MonoBehaviour
     public void Shoot()
     {
         Quaternion randomDeviationRotator = Quaternion.Euler(0,0,Random.Range(-randomDeviation, randomDeviation));
-        bulletInst = Instantiate(bullet, bulletSpawnPoint.position, this.transform.rotation * randomDeviationRotator);
+        if(bullet != null)
+        {
+            bulletInst = Instantiate(bullet, bulletSpawnPoint.position, this.transform.rotation * randomDeviationRotator);
+        }
     }
 }
