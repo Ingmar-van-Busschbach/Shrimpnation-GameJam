@@ -7,7 +7,7 @@ public class EnemyInput : MonoBehaviour
 {
     bool isCharging;
     float currentVelocityX;
-    float horizontalInput;
+    float horizontalInput = -1f;
     float gravity = -50f;
     float jumpVelocity;
     float jumpTimer;
@@ -65,6 +65,7 @@ public class EnemyInput : MonoBehaviour
         {
             jumpTimer -= jumpDelay;
             velocity.y = jumpVelocity;
+            canJump = false;
         }
 
         if (canCharge)

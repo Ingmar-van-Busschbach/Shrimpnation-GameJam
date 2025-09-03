@@ -9,6 +9,7 @@ public class Shooter2D : MonoBehaviour
 
     [SerializeField] private GameObject bullet;
     [SerializeField] private Transform bulletSpawnPoint;
+    [SerializeField] private float randomDeviation;
 
     private void Start()
     {
@@ -30,6 +31,7 @@ public class Shooter2D : MonoBehaviour
     }
     public void Shoot()
     {
-        bulletInst = Instantiate(bullet, bulletSpawnPoint.position, this.transform.rotation);
+        Quaternion randomDeviationRotator = Quaternion.Euler(0,0,Random.Range(-randomDeviation, randomDeviation));
+        bulletInst = Instantiate(bullet, bulletSpawnPoint.position, this.transform.rotation * randomDeviationRotator);
     }
 }
