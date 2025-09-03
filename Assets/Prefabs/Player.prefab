@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 88486527118226903}
   - component: {fileID: 2901755396622111882}
   - component: {fileID: 7719855842249874370}
+  - component: {fileID: 6188922909081339814}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -203,6 +204,7 @@ MonoBehaviour:
   collisionMask:
     serializedVersion: 2
     m_Bits: 128
+  defaultFlipSprite: 0
   horizontalRayCount: 4
   verticalRayCount: 4
   localUp: {x: 0, y: 1}
@@ -247,6 +249,19 @@ MonoBehaviour:
   lerpDistance: 10
   defaultOffset: {x: 2, y: 1, z: -40}
   showDebug: 0
+--- !u!114 &6188922909081339814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2396116666743361181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f4f7bd68e34ad459440134834fd4c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  healthBar: {fileID: 0}
 --- !u!1 &3070269540477851580
 GameObject:
   m_ObjectHideFlags: 0

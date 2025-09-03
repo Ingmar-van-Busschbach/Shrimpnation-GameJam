@@ -3,8 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class HealthSystem : MonoBehaviour, IDamageAble
 {
-    [SerializeField] public float maxHealth = 10f;
-    public float currentHealth;
+    [SerializeField] private float maxHealth = 10f;
+    private float currentHealth;
 
     void Start()
     {
@@ -19,6 +19,12 @@ public class HealthSystem : MonoBehaviour, IDamageAble
         {
             OnDeath();
         }
+    }
+    public float GetHealth(){
+        return currentHealth;
+    }
+    public float GetMaxHealth(){
+        return maxHealth;
     }
 
     public void OnDeath()
