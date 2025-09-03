@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8cb7af7db843d4147bd0ed148f752df2
+guid: 6556aadec613277479cca69afd5c203d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 395827631031292104
-    second: Play buttom_0
+      213: -8472523830804080367
+    second: Play buttom 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Play buttom_0
+      name: Play buttom 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c097eb12234e7500800000000000000
-      internalID: 395827631031292104
+      spriteID: 11914e9177c8b6a80800000000000000
+      internalID: -8472523830804080367
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Play buttom_0: 395827631031292104
+      Play buttom 1_0: -8472523830804080367
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
