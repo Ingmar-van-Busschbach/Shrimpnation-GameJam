@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(SpriteRenderer))]
 public class Controller2D : MonoBehaviour
 {
     // Requisites
     float horizontalRaySpacing;
     float verticalRaySpacing;
     BoxCollider2D collider;
+    SpriteRenderer spriteRenderer;
     RayCastOrigins rayCastOrigins;
     Vector2 projectedVelocity;
     Vector2 localForward;
@@ -17,6 +19,7 @@ public class Controller2D : MonoBehaviour
     // Variables
     [SerializeField] private float skinWidth = 0.015f;
     [SerializeField] private LayerMask collisionMask;
+    [SerializeField] private bool defaultFlipSprite = false;
     // Raycast settings
     [Range(2, 25)] // Clamp to make sure collision checks are made for each corner. It is not recommended to go above 10 for performance reasons.
     [SerializeField] private int horizontalRayCount = 12;
@@ -36,6 +39,7 @@ public class Controller2D : MonoBehaviour
         respawnLocation = transform.position;
         localForward = localUp.Rotate(-90); 
         collider = GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         CalculateRaySpacing(); // As we only update ray spacing once, you cannot change horizontalRayCount or verticalRayCount at runtime. If those need to be changed at runtime, move this function to function Move.
     }
 
@@ -66,16 +70,14 @@ public class Controller2D : MonoBehaviour
         {
             VerticalCollisions(ref velocity);
         }
-        Vector3 localScale = new Vector3(1f, 1f, 1f);
         if (velocity.x > 0)
         {
-            localScale.x = 1f;
+            spriteRenderer.flipX = defaultFlipSprite;
         }
         else if (velocity.x < 0)
         {
-            localScale.x = -1f;
+            spriteRenderer.flipX = !defaultFlipSprite;
         }
-        this.gameObject.transform.localScale = localScale;
         // Recombine velocities through their own projected local axis
         velocity = localForward * projectedVelocity.x + localUp * projectedVelocity.y;
 
@@ -156,10 +158,10 @@ public class Controller2D : MonoBehaviour
         Vector2 test2 = (Vector2)bounds.center + -localUp * bounds.extents + localForward * bounds.extents;
         Vector2 test3 = (Vector2)bounds.center + localUp * bounds.extents + -localForward * bounds.extents;
         Vector2 test4 = (Vector2)bounds.center + localUp * bounds.extents + localForward * bounds.extents;
-        rayCastOrigins.bottomLeft = test1;//new Vector2(bounds.min.x, bounds.min.y);
-        rayCastOrigins.bottomRight = test2;//new Vector2(bounds.max.x, bounds.min.y);
-        rayCastOrigins.topLeft = test3;//new Vector2(bounds.min.x, bounds.max.y);
-        rayCastOrigins.topRight = test4;//new Vector2(bounds.max.x, bounds.max.y);
+        rayCastOrigins.bottomLeft = new Vector2(bounds.min.x, bounds.min.y);
+        rayCastOrigins.bottomRight = new Vector2(bounds.max.x, bounds.min.y);
+        rayCastOrigins.topLeft = new Vector2(bounds.min.x, bounds.max.y);
+        rayCastOrigins.topRight = new Vector2(bounds.max.x, bounds.max.y);
     }
 
     void CalculateRaySpacing()
