@@ -313,8 +313,8 @@ Transform:
   m_GameObject: {fileID: 3070269540477851580}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0.3, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0}
+  m_LocalPosition: {x: -0.18, y: 0.25, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1772877139418417197}
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999e4d5d8b598a943a3470166e0cd014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShootInput
-  shootDelay: 0.1
+  shootDelay: 0.2
 --- !u!212 &8096123124091590755
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -394,7 +394,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5879229001868888675, guid: 7dd53be4fca24f64bbe49e4962f96987, type: 3}
+  m_Sprite: {fileID: 3338801036398717453, guid: 14bdede8bad9c3b40a6b054fb5c87017, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
