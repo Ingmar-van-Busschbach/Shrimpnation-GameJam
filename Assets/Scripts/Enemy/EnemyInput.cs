@@ -65,6 +65,7 @@ public class EnemyInput : MonoBehaviour
         {
             jumpTimer -= jumpDelay;
             velocity.y = jumpVelocity;
+            canJump = false;
         }
 
         if (canCharge)
