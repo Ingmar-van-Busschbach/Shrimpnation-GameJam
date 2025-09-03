@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828d01ca15094ca429bb46c5b0685a4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooter2D
-  bullet: {fileID: 4743296391350776030, guid: 6f8a777517d31844c8d0546f2455a80c, type: 3}
+  bullet: {fileID: 4743296391350776030, guid: 3c48a3214f80a5347b0bd0f8e4fcd10d, type: 3}
   bulletSpawnPoint: {fileID: 1772877139418417197}
 --- !u!114 &288242948671053733
 MonoBehaviour:
