@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(Controller2D))]
+[RequireComponent(typeof(Animator))]
 public class EnemyInput : MonoBehaviour
 {
     bool isCharging;
@@ -11,6 +12,7 @@ public class EnemyInput : MonoBehaviour
     float jumpVelocity;
     float jumpTimer;
     GameObject player;
+    Animator animator;
     Controller2D controller;
     Vector2 velocity;
 
@@ -32,6 +34,7 @@ public class EnemyInput : MonoBehaviour
     {
         // Get components
         controller = GetComponent<Controller2D>();
+        animator = GetComponent<Animator>();
         player = FindFirstObjectByType<PlayerInput>().gameObject;
 
         // Setup jump variables to allow for more logical exposed settings.
@@ -46,6 +49,11 @@ public class EnemyInput : MonoBehaviour
         if (controller.collisionInfo.below)
         {// Reset jump data if grunded
             canJump = true;
+            animator.SetBool("isJumping", false);
+        }
+        else
+        {
+            animator.SetBool("isJumping", true);
         }
         if (controller.collisionInfo.above || controller.collisionInfo.below)
         {// Reset velocity Y when touching the ground to prevent gravity accumulation
