@@ -158,10 +158,10 @@ public class Controller2D : MonoBehaviour
         Vector2 test2 = (Vector2)bounds.center + -localUp * bounds.extents + localForward * bounds.extents;
         Vector2 test3 = (Vector2)bounds.center + localUp * bounds.extents + -localForward * bounds.extents;
         Vector2 test4 = (Vector2)bounds.center + localUp * bounds.extents + localForward * bounds.extents;
-        rayCastOrigins.bottomLeft = test1;//new Vector2(bounds.min.x, bounds.min.y);
-        rayCastOrigins.bottomRight = test2;//new Vector2(bounds.max.x, bounds.min.y);
-        rayCastOrigins.topLeft = test3;//new Vector2(bounds.min.x, bounds.max.y);
-        rayCastOrigins.topRight = test4;//new Vector2(bounds.max.x, bounds.max.y);
+        rayCastOrigins.bottomLeft = new Vector2(bounds.min.x, bounds.min.y);
+        rayCastOrigins.bottomRight = new Vector2(bounds.max.x, bounds.min.y);
+        rayCastOrigins.topLeft = new Vector2(bounds.min.x, bounds.max.y);
+        rayCastOrigins.topRight = new Vector2(bounds.max.x, bounds.max.y);
     }
 
     void CalculateRaySpacing()
