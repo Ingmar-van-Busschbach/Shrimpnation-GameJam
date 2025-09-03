@@ -1,16 +1,13 @@
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemyActivator : MonoBehaviour
 {
-    GameObject enemyInst;
     GameObject player;
-    private float currentDelay;
+    bool activated;
 
-    [SerializeField] private GameObject enemyToSpawn;
+    [SerializeField] private GameObject[] enemiesToActivate;
     [SerializeField] private Vector2 bottomLeftSpawnTrigger;
     [SerializeField] private Vector2 topRightSpawnTrigger;
-    [SerializeField] private float spawnDelay = 3f;
-    [SerializeField] private Transform spawnLocation;
 
     private void Start()
     {
@@ -19,7 +16,10 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        currentDelay -= Time.deltaTime;
+        if (activated)
+        {
+            return;
+        }
         if (
             player.transform.position.x > this.transform.position.x + bottomLeftSpawnTrigger.x &&
             player.transform.position.y > this.transform.position.y + bottomLeftSpawnTrigger.y &&
@@ -27,15 +27,11 @@ public class EnemySpawner : MonoBehaviour
             player.transform.position.y < this.transform.position.y + topRightSpawnTrigger.y
             )
         {
-            if (currentDelay <= 0)
+            activated = true;
+            foreach (GameObject enemyToActivate in enemiesToActivate)
             {
-                currentDelay = spawnDelay;
-                SpawnEnemy();
+                enemyToActivate.GetComponent<EnemyInput>().enabled = true;
             }
         }
-    }
-    void SpawnEnemy()
-    {
-        enemyInst = Instantiate(enemyToSpawn, spawnLocation.position, this.transform.rotation);
     }
 }
