@@ -132,9 +132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe3d211197cc8084485ac4c5c456ad0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletBehavior
-  damage: 1
-  velocity: 5
-  lifeTime: 3
+  damage: 0.5
+  velocity: 10
+  lifeTime: 2
   collisionLayers:
     serializedVersion: 2
     m_Bits: 192

@@ -183,9 +183,9 @@ MonoBehaviour:
   inputTowardsPlayer: 1
   canJump: 1
   jumpDelay: 2
-  canCharge: 0
-  chargeSpeed: 10
-  chargeDistance: 5
+  canCharge: 1
+  chargeSpeed: 7
+  chargeDistance: 1
 --- !u!114 &1364634094722805414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,5 +268,5 @@ MonoBehaviour:
   collisionLayers:
     serializedVersion: 2
     m_Bits: 64
-  damagePerSecond: 1
+  damagePerSecond: 5
   hurtBoxSize: {x: 0.5, y: 0.1}
