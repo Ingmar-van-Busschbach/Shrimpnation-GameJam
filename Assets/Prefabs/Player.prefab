@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 7719855842249874370}
   - component: {fileID: 9204867550756186874}
   - component: {fileID: 3993569062051440086}
+  - component: {fileID: 3700744319249377014}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -189,6 +190,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
   maxHealth: 30
+  loadSceneOnDeath: 1
+  sceneToLoad: DeathScene
+  sceneLoader: {fileID: 3700744319249377014}
 --- !u!114 &88486527118226903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +289,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   healthBar: {fileID: 0}
+--- !u!114 &3700744319249377014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2396116666743361181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 312f0b60c5df1c245a3c6f56d56a6706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
 --- !u!1 &3070269540477851580
 GameObject:
   m_ObjectHideFlags: 0

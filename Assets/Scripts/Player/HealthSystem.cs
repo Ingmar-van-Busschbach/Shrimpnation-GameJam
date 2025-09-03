@@ -5,10 +5,16 @@ public class HealthSystem : MonoBehaviour, IDamageAble
 {
     [SerializeField] private float maxHealth = 10f;
     private float currentHealth;
+    [SerializeField] private bool loadSceneOnDeath;
+    [SerializeField] private string sceneToLoad;
+    [SerializeField] private SceneLoader sceneLoader;
 
     void Start()
     {
         currentHealth = maxHealth;
+        if(loadSceneOnDeath){
+            sceneLoader = GetComponent<SceneLoader>();
+        }
     }
 
     public void ApplyDamage(float damage)
@@ -29,6 +35,11 @@ public class HealthSystem : MonoBehaviour, IDamageAble
 
     public void OnDeath()
     {
-        Destroy(this.gameObject);
+        if(loadSceneOnDeath){
+            sceneLoader.LoadScene(sceneToLoad);
+        }
+        else{
+            Destroy(this.gameObject);
+        }
     }
 }
