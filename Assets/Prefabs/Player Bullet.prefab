@@ -133,8 +133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletBehavior
   damage: 1
-  velocity: 5
-  lifeTime: 3
+  velocity: 10
+  lifeTime: 2
   collisionLayers:
     serializedVersion: 2
     m_Bits: 384
