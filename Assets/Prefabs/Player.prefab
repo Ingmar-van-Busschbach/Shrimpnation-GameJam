@@ -334,6 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Shooter2D
   bullet: {fileID: 4743296391350776030, guid: 3c48a3214f80a5347b0bd0f8e4fcd10d, type: 3}
   bulletSpawnPoint: {fileID: 1772877139418417197}
+  randomDeviation: 0
 --- !u!114 &288242948671053733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,7 +397,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 3338801036398717453, guid: 14bdede8bad9c3b40a6b054fb5c87017, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 4.7, y: 1.32}
