@@ -1243,7 +1243,7 @@ Transform:
   m_GameObject: {fileID: 1710229641}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.58, y: 3.72, z: 0}
+  m_LocalPosition: {x: 29.11, y: 3.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1363,6 +1363,22 @@ PrefabInstance:
     - target: {fileID: 1876318417243322169, guid: 3dbd2cc2fcfe72d48aef460593e9ba4f, type: 3}
       propertyPath: shootDelay
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984791704461059886, guid: 3dbd2cc2fcfe72d48aef460593e9ba4f, type: 3}
+      propertyPath: canCharge
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984791704461059886, guid: 3dbd2cc2fcfe72d48aef460593e9ba4f, type: 3}
+      propertyPath: moveSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984791704461059886, guid: 3dbd2cc2fcfe72d48aef460593e9ba4f, type: 3}
+      propertyPath: chargeSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984791704461059886, guid: 3dbd2cc2fcfe72d48aef460593e9ba4f, type: 3}
+      propertyPath: chargeDistance
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7709944569246538285, guid: 3dbd2cc2fcfe72d48aef460593e9ba4f, type: 3}
       propertyPath: m_FlipX
