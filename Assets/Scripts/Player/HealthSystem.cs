@@ -20,6 +20,12 @@ public class HealthSystem : MonoBehaviour, IDamageAble
             OnDeath();
         }
     }
+    public float GetHealth(){
+        return currentHealth;
+    }
+    public float GetMaxHealth(){
+        return maxHealth;
+    }
 
     public void OnDeath()
     {
