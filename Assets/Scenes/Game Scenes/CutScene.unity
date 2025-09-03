@@ -522,8 +522,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1728174497}
   - component: {fileID: 1728174496}
+  - component: {fileID: 1728174498}
   m_Layer: 0
-  m_Name: Scene Switcher
+  m_Name: Image Switcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -542,13 +543,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IntroImageSwitcher
   displayImage: {fileID: 692274723}
+  sceneLoader: {fileID: 1728174498}
+  sceneToLoad: lvl1
   images:
   - {fileID: -4353768343339756392, guid: a237f72dce8a46344941f956cf976071, type: 3}
   - {fileID: 9200669606726808476, guid: 2519944b8c41b654c808bab28a1cb54e, type: 3}
   - {fileID: -7647059266142870048, guid: 7e991f0676130de4a87e25b6c1227832, type: 3}
   - {fileID: 4855485297499797216, guid: b1da37d569742694893bbd61a962b8eb, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
   switchTime: 2
 --- !u!4 &1728174497
 Transform:
@@ -565,6 +566,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1728174498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728174495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 312f0b60c5df1c245a3c6f56d56a6706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
