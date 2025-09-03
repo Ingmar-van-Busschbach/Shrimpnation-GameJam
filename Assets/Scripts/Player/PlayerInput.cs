@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent (typeof(Controller2D))]
+[RequireComponent(typeof(Animator))]
 public class PlayerInput : MonoBehaviour
 {
     // Requisites
@@ -15,6 +16,7 @@ public class PlayerInput : MonoBehaviour
     float jumpVelocity;
     int currentJumpCount;
     Controller2D controller;
+    Animator animator;
     Vector2 velocity;
 
     // Variables
@@ -37,6 +39,7 @@ public class PlayerInput : MonoBehaviour
     {
         // Get components
         controller = GetComponent<Controller2D>();
+        animator = GetComponent<Animator>();
 
         // Setup jump variables to allow for more logical exposed settings.
         gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
@@ -52,9 +55,11 @@ public class PlayerInput : MonoBehaviour
             canJump = true;
             currentJumpCount = 0;
             jumpForgivenessTimer = 0;
+            animator.SetBool("isJumping", false);
         }
         else
         {// If player is not grounded, tick up to the jumpForgivenessTime, before disabling canJump. If maxJumpCount == 1, then this prevents jumping entirely. If maxJumpCount > 1, then the player will use an air jump.
+            animator.SetBool("isJumping", true);
             if (jumpForgivenessTimer <= jumpForgivenessTime) { jumpForgivenessTimer += Time.deltaTime; }
             else { canJump = false; }
         }
@@ -72,9 +77,10 @@ public class PlayerInput : MonoBehaviour
         float horizontalInput = 0;
         if (Input.GetKey(horizontalInputKeys[0])) { horizontalInput += 1; }
         if (Input.GetKey(horizontalInputKeys[1])) { horizontalInput -= 1; }
+        animator.SetBool("isWalking", horizontalInput != 0);
 
         // Jump input
-        if(Input.GetKey(jumpKey))
+        if (Input.GetKey(jumpKey))
         {
             if (!jumpButtonPressed && currentJumpCount < maxJumpCount)
             {
