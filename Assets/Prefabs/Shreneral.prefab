@@ -98,7 +98,7 @@ MonoBehaviour:
   skinWidth: 0.015
   collisionMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 640
   defaultFlipSprite: 0
   horizontalRayCount: 4
   verticalRayCount: 4
@@ -124,6 +124,9 @@ MonoBehaviour:
   inputTowardsPlayer: 1
   canJump: 0
   jumpDelay: 2
+  canCharge: 0
+  chargeSpeed: 10
+  chargeDistance: 5
 --- !u!212 &5252485156774236368
 SpriteRenderer:
   m_ObjectHideFlags: 0
