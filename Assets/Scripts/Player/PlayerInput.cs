@@ -82,7 +82,7 @@ public class PlayerInput : MonoBehaviour
         // Jump input
         if (Input.GetKey(jumpKey))
         {
-            if (!jumpButtonPressed && currentJumpCount < maxJumpCount)
+            if (!jumpButtonPressed && canJump)
             {
                 jumpButtonPressed = true;
                 velocity.y = jumpVelocity;
