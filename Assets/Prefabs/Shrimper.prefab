@@ -82,7 +82,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3, y: 1}
+  m_Size: {x: 1, y: 0.4}
   m_EdgeRadius: 0
 --- !u!212 &221459282798124765
 SpriteRenderer:
@@ -177,15 +177,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyInput
   jumpHeight: 4
   timeToJumpApex: 0.4
-  moveSpeed: 6
+  moveSpeed: 5
   accelerationTimeGrounded: 0.1
   offsetToPlayer: 0
   inputTowardsPlayer: 1
   canJump: 1
   jumpDelay: 2
-  canCharge: 0
-  chargeSpeed: 10
-  chargeDistance: 5
+  canCharge: 1
+  chargeSpeed: 7
+  chargeDistance: 1
 --- !u!114 &1364634094722805414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ Transform:
   m_GameObject: {fileID: 4128546774299782460}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.007, y: -0.015, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -267,6 +267,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HurtBox
   collisionLayers:
     serializedVersion: 2
-    m_Bits: 0
-  damagePerSecond: 1
-  hurtBoxSize: {x: 1, y: 1}
+    m_Bits: 64
+  damagePerSecond: 5
+  hurtBoxSize: {x: 0.5, y: 0.1}

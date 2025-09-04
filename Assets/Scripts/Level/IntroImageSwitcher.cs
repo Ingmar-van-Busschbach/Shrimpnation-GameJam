@@ -1,15 +1,19 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(SceneLoader))]
 public class IntroImageSwitcher : MonoBehaviour
 {
     public Image displayImage;              // The UI Image to display on screen
+    public SceneLoader sceneLoader;
+    public string sceneToLoad;
     public Sprite[] images;                 // Your 2D images to switch between
     public float switchTime = 2f;           // Time between switches
     private int currentIndex = 0;
 
     private void Start()
     {
+        sceneLoader = GetComponent<SceneLoader>();
         if (images.Length > 0)
         {
             displayImage.sprite = images[0];
@@ -31,6 +35,7 @@ public class IntroImageSwitcher : MonoBehaviour
         if (currentIndex >= images.Length)
         {
             CancelInvoke(nameof(SwitchImage));
+            sceneLoader.LoadScene(sceneToLoad);
             // Optional: Load next scene or continue game
             return;
         }
