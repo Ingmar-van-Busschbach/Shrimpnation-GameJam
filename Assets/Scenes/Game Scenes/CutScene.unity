@@ -646,8 +646,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -167}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -0.000030518, y: -181.21017}
+  m_SizeDelta: {x: 982.8, y: 92.1797}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1728174495
 GameObject:
@@ -730,8 +730,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IntroTextSwitcher
   text: {fileID: 1435177350}
   lines:
-  - Test
-  - Test 2
+  - It was the year 3136 when The Lobsters overthrew The Shroverment.
+  - They killed the Shrimps and took the shrimplets as slaves.
+  - Your little shribling was no exception...
+  - So now you're on war path to get them back.
   switchTime: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
