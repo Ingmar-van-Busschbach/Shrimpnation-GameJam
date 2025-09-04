@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bd1b55fc061c8d4b8c13192844026dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyInput
-  jumpHeight: 4
+  jumpHeight: 0
   timeToJumpApex: 0.4
   moveSpeed: 8
   accelerationTimeGrounded: 0.1
@@ -403,6 +403,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
   maxHealth: 10
+  loadSceneOnDeath: 0
+  sceneToLoad: 
+  sceneLoader: {fileID: 0}
 --- !u!95 &6142815720656294194
 Animator:
   serializedVersion: 7
