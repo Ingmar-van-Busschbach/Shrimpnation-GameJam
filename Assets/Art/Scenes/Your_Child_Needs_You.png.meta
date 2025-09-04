@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d8cfd90b5493f7e40ab632fef578cbf9
+guid: c688518b9a1d00c499179f1cacad468e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3959141525248930083
-    second: Your Child Needs You_0
+      213: 8250271436871021438
+    second: Your_Child_Needs_You_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,24 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Your Child Needs You_0
+      name: Your_Child_Needs_You_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dde0a0c52cd4e09c0800000000000000
-      internalID: -3959141525248930083
+      spriteID: e73bf37f82ade7270800000000000000
+      internalID: 8250271436871021438
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Your Child Needs You_0: -3959141525248930083
+      Your_Child_Needs_You_0: 8250271436871021438
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
