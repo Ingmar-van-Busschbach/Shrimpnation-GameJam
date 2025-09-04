@@ -546,10 +546,9 @@ MonoBehaviour:
   sceneLoader: {fileID: 1728174498}
   sceneToLoad: Main Menu
   images:
-  - {fileID: -4353768343339756392, guid: a237f72dce8a46344941f956cf976071, type: 3}
-  - {fileID: 9200669606726808476, guid: 2519944b8c41b654c808bab28a1cb54e, type: 3}
-  - {fileID: -7647059266142870048, guid: 7e991f0676130de4a87e25b6c1227832, type: 3}
-  - {fileID: 4855485297499797216, guid: b1da37d569742694893bbd61a962b8eb, type: 3}
+  - {fileID: 3798528048694073098, guid: 61c54fbabade92543954bb8666e0c2ed, type: 3}
+  - {fileID: 7685481159492046062, guid: d7e64833e06c31e499e49f9be02f0589, type: 3}
+  - {fileID: 5716568150570040914, guid: f602c89442faaff499c0db41bdebeb08, type: 3}
   switchTime: 2
 --- !u!4 &1728174497
 Transform:
